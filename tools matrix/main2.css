@@ -1,7 +1,10 @@
-body {margin: 0 auto; max-width:720px;}
+body {margin: 0 auto;
+  max-width:800px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;}
+.muted {color: #999;}
 table {
   width: 100%;
-  max-width: 720px;
+  max-width: 800px;
   border-collapse: collapse;
 }
 
@@ -30,23 +33,27 @@ td.premium {background: #C0E3F0;
   /*padding: 20px;*/
   width: 16%;
 }
-
+.benefits-header {text-align:left;}
 .allbenefits {margin-top: 40px;}
 td.anyone {width: auto;}
 .premium i {color:#39B54A;}
-.yes {display: block; background: url("checkmark.png") 50% 50% no-repeat;
+td.nonmember span, td.basic span, td.premium span {
+display: block;
 margin-left: auto; margin-right: auto;
-text-indent: -9999px;
-background-size: 36px;
 width: 36px;
 height: 44px;
-/*outline: 1px solid red;*/
 }
+.yes-text {color: #39B54A; text-indent: 0; width: 100%; width: 100% !important; height: auto !important}
+.yes {background: url("checkmark.png") 50% 50% no-repeat; background-size: 36px; text-indent: -9999px;}
+.no {background: url("x-mark.png") 50% 50% no-repeat; background-size: 36px; text-indent: -9999px;}
 
 small {display:block;}
+.header {font-size: 18px; font-weight:normal;}
+
 
 @media
 only screen and (max-width: 480px)  {
+  h1 {font-size: 24px;}
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr {
 		display: block;
@@ -57,35 +64,56 @@ only screen and (max-width: 480px)  {
 		top: -9999px;
 		left: -9999px;
 	}
-
-	td.benefit, td.nonmember, td.basic, td.premium {
+  tr {margin-bottom: 40px;}
+	td.nonmember, td.basic, td.premium {
 		/* Behave  like a "row" */
 		border: none;
 		border-bottom: 1px solid #eee;
 		position: relative;
-		padding-left: 50%;
-    width: auto !important;
+		/*padding-left: 50%;*/
+    /*width: auto !important;*/
+    width: 33.33333%;
+    float:left;
+    /*display: inline-block;*/
+    /*outline: 1px solid lime;*/
+    padding: 0 !important;
+    margin: 0 !important;
 	}
+  td.nonmember span , td.basic span, td.premium span {clear:both;}
+
   td.benefit {
+    clear:both;
 		padding-left: 0;
     padding: 10px;
-    font-size: 20px; font-weight:normal;
+    font-size: 21px; font-weight:normal;
     background: #fff;
+    /*outline: 1px solid blue;*/
+    width: auto;
+    padding-top:24px;
+    background: #C1DAE6;
 	}
   .benefit small {
     font-weight:normal; font-size: 13px;
   }
+.yes-text {
+  line-height: 44px;
+}
+  .yes {
+  background-size: 30px;
+  height: 44px;
+  }
 	td:before {
-		/* Now like a table header */
-		position: absolute;
 		top: 10px;
 		left: 10px;
-		width: 45%;
-		padding-right: 10px;
+		width: 100%;
+		float: left;
 		white-space: nowrap;
     /*outline: 1px solid red;*/
+    background: #fff;
+    padding: 10px 0;
+    color: #777;
+    font-size: 14px;
 	}
-
 	td:nth-of-type(2):before { content: "Non-Member"; }
 	td:nth-of-type(3):before { content: "Basic"; }
 	td:nth-of-type(4):before { content: "Premium"; }
