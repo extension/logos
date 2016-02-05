@@ -1,0 +1,92 @@
+body {margin: 0 auto; max-width:720px;}
+table {
+  width: 100%;
+  max-width: 720px;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+  font-size: 20px;
+}
+td, th {
+  padding: 6px;
+  border-bottom: 1px solid #fff;
+  border-right: 2px solid #fff;
+  text-align: center;
+}
+td.benefit {background: #C1DAE6; padding: 12px; color: #1B1464;
+  width: 52%; text-align:left;
+}
+td.nonmember {background: #D8E9F0;
+  /*padding: 20px;*/
+  width: 16%;
+}
+td.basic {background: #CCE6F0;
+  /*padding: 20px;*/
+  width: 16%;
+}
+td.premium {background: #C0E3F0;
+  /*padding: 20px;*/
+  width: 16%;
+}
+
+.allbenefits {margin-top: 40px;}
+td.anyone {width: auto;}
+.premium i {color:#39B54A;}
+.yes {display: block; background: url("checkmark.png") 50% 50% no-repeat;
+margin-left: auto; margin-right: auto;
+text-indent: -9999px;
+background-size: 36px;
+width: 36px;
+height: 44px;
+/*outline: 1px solid red;*/
+}
+
+small {display:block;}
+
+@media
+only screen and (max-width: 480px)  {
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	td.benefit, td.nonmember, td.basic, td.premium {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+    width: auto !important;
+	}
+  td.benefit {
+		padding-left: 0;
+    padding: 10px;
+    font-size: 20px; font-weight:normal;
+    background: #fff;
+	}
+  .benefit small {
+    font-weight:normal; font-size: 13px;
+  }
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+    /*outline: 1px solid red;*/
+	}
+
+	td:nth-of-type(2):before { content: "Non-Member"; }
+	td:nth-of-type(3):before { content: "Basic"; }
+	td:nth-of-type(4):before { content: "Premium"; }
+}
