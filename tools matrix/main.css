@@ -20,6 +20,7 @@ td, th {
   border-right: 2px solid #fff;
   text-align: center;
 }
+
 td.benefit {background: #C1DAE6; padding: 12px; color: #1B1464;
   width: 52%; text-align:left;
 }
@@ -39,6 +40,7 @@ td.premium {background: #C0E3F0;
 
 .allbenefits {margin-top: 40px;}
 td.anyone {width: auto;}
+.anyone h3 {color:#39B54A; font-weight: normal !important;}
 .premium i {color:#39B54A;}
 td.nonmember span, td.basic span, td.premium span {
 display: block;
@@ -70,18 +72,19 @@ small {display:block;}
 only screen and (max-width: 480px)  {
   body {padding: 10px;}
   h1 {font-size: 24px;}
+  .table-header {color: #f47B28; padding: 20px 0 10px; font-size: 21px; border-bottom: 2px solid #ccc;}
 	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr {
+	table#benefits-matrix, #benefits-matrix thead, #benefits-matrix tbody, #benefits-matrix th,  #benefits-matrix td,  #benefits-matrix tr {
 		display: block;
 	}
 	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr {
+	#benefits-matrix thead tr {
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
 
-	td.benefit, td.nonmember, td.basic, td.premium {
+	#benefits-matrix td.benefit, #benefits-matrix td.nonmember, #benefits-matrix td.basic, #benefits-matrix td.premium {
 		/* Behave  like a "row" */
 		border: none;
 		border-bottom: 1px solid #fff;
@@ -91,7 +94,7 @@ only screen and (max-width: 480px)  {
     /*border-right: 20px solid #fff;*/
     /*border-left: 20px solid #fff;*/
 	}
-  td.benefit {
+  #benefits-matrix td.benefit {
 		padding-left: 0;
     padding: 10px;
     font-size: 20px; font-weight:normal;
@@ -113,7 +116,7 @@ only screen and (max-width: 480px)  {
 
 
 
-	td:before {
+	#benefits-matrix td:before {
 		/* Now like a table header */
 		position: absolute;
 		top: 10px;
@@ -128,7 +131,7 @@ only screen and (max-width: 480px)  {
     /*outline: 1px solid red;*/
 	}
 
-	td:nth-of-type(2):before { content: "Non-Member"; }
-	td:nth-of-type(3):before { content: "Basic"; }
-	td:nth-of-type(4):before { content: "Premium"; }
+	#benefits-matrix td:nth-of-type(2):before { content: "Non-Member"; }
+	#benefits-matrix td:nth-of-type(3):before { content: "Basic"; }
+	#benefits-matrix td:nth-of-type(4):before { content: "Premium"; }
 }
