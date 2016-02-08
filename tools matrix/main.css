@@ -1,44 +1,22 @@
 body {margin: 0 auto;
   max-width:800px;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;}
+
+
+table.benefits {width: 100%;max-width: 800px;border-collapse: collapse;}
+.benefits th {font-weight: bold;font-size: 20px;}
+.benefits td, .benefits th {padding: 6px;border-bottom: 1px solid #fff;border-right: 2px solid #fff;text-align: center; vertical-align:middle;}
+td.benefit {background: #C1DAE6; padding: 12px; color: #1B1464;width: 52%; text-align:left;}
+td.nonmember {background: #D8E9F0;width: 16%;}
+td.basic {background: #CCE6F0;width: 16%;}
+td.premium {background: #C0E3F0;width: 16%;}
+
+.benefits sup {font-size: 16px;}
 .muted {color: #999;}
 .header {font-size: 18px; font-weight:normal;}
 .yes-link {color:#39B54A;}
-table {
-  width: 100%;
-  max-width: 800px;
-  border-collapse: collapse;
-}
-
-th {
-  font-weight: bold;
-  font-size: 20px;
-}
-td, th {
-  padding: 6px;
-  border-bottom: 1px solid #fff;
-  border-right: 2px solid #fff;
-  text-align: center;
-}
-
-td.benefit {background: #C1DAE6; padding: 12px; color: #1B1464;
-  width: 52%; text-align:left;
-}
-td.nonmember {background: #D8E9F0;
-  /*padding: 20px;*/
-  width: 16%;
-}
-td.basic {background: #CCE6F0;
-  /*padding: 20px;*/
-  width: 16%;
-}
-td.premium {background: #C0E3F0;
-  /*padding: 20px;*/
-  width: 16%;
-}
-
-
 .allbenefits {margin-top: 40px;}
+.footnote {font-size: 14px;}
 td.anyone {width: auto;}
 .anyone h3 {color:#39B54A; font-weight: normal !important;}
 .premium i {color:#39B54A;}
@@ -50,28 +28,16 @@ width: 36px;
 height: 44px;
 }
 .yes-text {color: #39B54A; text-indent: 0; width: 100%; width: 100% !important; height: auto !important; line-height: 44px;}
-.yes {background: url("checkmark.png") 50% 50% no-repeat; background-size: 36px;}
-.no {background: url("x-mark.png") 50% 50% no-repeat; background-size: 36px;}
+.yes {background: url("images/checkmark.png") 50% 50% no-repeat; background-size: 36px;}
+.no {background: url("images/x-mark.png") 50% 50% no-repeat; background-size: 36px;}
 .cell-text {text-indent: -9999px;display:block;}
-.asterisk {
-  /*outline: 1px solid magenta;*/
-  position: absolute !important;
-  width: 44px !important;
-  height: 44px;
-  top:0; left:0;
-  text-align: right;
-  font-size: 24px;
-  font-weight:normal;
-}
-
+.asterisk {position: absolute !important;width: 44px !important;height: 44px;top:0; left:0;text-align: right;font-size: 24px;font-weight:normal;}
 small {display:block;}
 
 
 
 @media
 only screen and (max-width: 480px)  {
-  body {padding: 10px;}
-  h1 {font-size: 24px;}
   .table-header {color: #f47B28; padding: 20px 0 10px; font-size: 21px; border-bottom: 2px solid #ccc;}
 	/* Force table to not be like tables anymore */
 	table#benefits-matrix, #benefits-matrix thead, #benefits-matrix tbody, #benefits-matrix th,  #benefits-matrix td,  #benefits-matrix tr {
@@ -91,8 +57,6 @@ only screen and (max-width: 480px)  {
 		position: relative;
 		padding-left: 50%;
     width: auto !important;
-    /*border-right: 20px solid #fff;*/
-    /*border-left: 20px solid #fff;*/
 	}
   #benefits-matrix td.benefit {
 		padding-left: 0;
@@ -100,21 +64,12 @@ only screen and (max-width: 480px)  {
     font-size: 20px; font-weight:normal;
     background: #fff;
     margin-top:24px;
-    /*border-right: 10px solid #fff;*/
-    /*border-left: 10px solid #fff;*/
 	}
-  .benefit small {
-    font-weight:normal; font-size: 13px;
-  }
-  td.nonmember span, td.basic span, td.premium span {
-  height: 30px;
-  }
+  .benefit small {font-weight:normal; font-size: 13px;}
+  td.nonmember span, td.basic span, td.premium span {height: 30px;}
   .yes-text {line-height: 30px;}
   .yes {background-size: 24px;}
   .no {background-size: 24px;}
-
-
-
 
 	#benefits-matrix td:before {
 		/* Now like a table header */
@@ -128,7 +83,6 @@ only screen and (max-width: 480px)  {
     color: #174287;
     text-align:left;
     font-size: 15px;
-    /*outline: 1px solid red;*/
 	}
 
 	#benefits-matrix td:nth-of-type(2):before { content: "Non-Member"; }
